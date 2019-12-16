@@ -1,0 +1,70 @@
+.page-nav  {
+    padding: 0;
+    position: static;
+
+    @media (max-width: 600px) {
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+}
+
+ul.page-menu {
+    display: flex;
+
+    .nav-item {
+        &.active {
+            .nav-link {
+                background: #{$red-v3};
+                color: #{$white};
+                opacity: 1;
+                font-weight: 700;
+            }
+        }
+
+        /* link style */
+        .nav-link {
+            color: #{$white};
+            opacity: 0.8;
+            display: block;
+            padding: 1.4125rem 1.9rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            transition: all .3s ease-in-out;
+            line-height: 1;
+            min-width: 95px;
+            width: 100%;
+            text-align: center;
+
+            &:hover {
+                opacity: 1;
+                background:  #{$red-v3};
+            }
+        }
+    }
+}
+
+/* menu mobil style */
+.navbar-dark .navbar-toggler {
+    position: absolute;
+    z-index: 200;
+    color: #fff;
+    border-color: #fff;
+    background-size: 70%;
+
+    @media (max-width: 600px) {
+        top: 70px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-collapse  {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background: #{$red-v1};
+        padding: 20px;
+    }
+}

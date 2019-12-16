@@ -1,0 +1,24 @@
+/* global link style */
+.link {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.20px;
+
+    &--primary {
+        color: #{$red-v3};
+    }
+
+    &--secondary {
+        color: #{$gray-v3};
+    }
+
+    &--underline {
+        color: #{$gray-v3};
+        text-decoration: underline;
+    }
+
+    &--italic {
+        color: #{$gray-v3};
+        font-style: italic;
+    }
+}

@@ -1,0 +1,128 @@
+.filter-bar {
+    height: 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    @media (max-width: 1400px) {
+        height: 65px;
+    }
+
+    @media (max-width: 1200px) {
+        height: auto;
+        min-height: 65px;
+        flex-wrap: wrap;
+    }
+
+    >ul {
+        display: flex;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: #{$white};
+            height: 100%;
+            font-size: 20px;
+
+            >a {
+                color: #{$white};
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 2.5vw;
+            }
+        }
+
+        .btn-group {
+            padding: 0 1.5em;
+
+            .dropdown-toggle::after {
+                vertical-align: middle;
+                font-size: 14px;
+            }
+
+            .btn {
+                color: #{$white};
+                font-size: 1.1rem;
+            }
+        }
+
+
+        @media (max-width: 1400px) {
+            .btn-group {
+                .btn {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            li {
+                width: 25%;
+                height: 70px;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                height: 55px;
+            }
+        }
+    }
+
+    .filter-search-form {
+        height: 100%;
+        padding: 26px 2.5vw;
+        width: 35%;
+        min-width: 300px;
+
+        .input-search {
+            display: flex;
+            align-items: center;
+
+            i {
+                color: #{$white};
+                font-size: 25px;
+            }
+        }
+
+        input {
+            @include placeholder($placeholderColor);
+            color: #fff;
+            background: none;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 1400px) {
+            width: 30%;
+            padding: 22px 2vw;
+
+            .input-search {
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            input {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            min-width: 100%;
+        }
+
+
+        @media (max-width: 600px) {
+            padding: 17px 5vw;
+        }
+    }
+}

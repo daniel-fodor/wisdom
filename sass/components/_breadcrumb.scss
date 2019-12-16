@@ -1,0 +1,21 @@
+/* breadcrumb global style */
+.cs-breadcrumb {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 16px;
+    align-items: center;
+    position: relative;
+
+    li {
+        color: #{$white};
+        padding: 0 2px;
+        font-size: 20px;
+
+        a {
+            display: block;
+            color: #{$white};
+        }
+    }
+
+}

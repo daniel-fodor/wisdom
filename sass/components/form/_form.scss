@@ -1,0 +1,62 @@
+@import "inputs";
+@import "textarea";
+
+form {
+    display: block;
+    position: relative;
+}
+
+/* global forms style on the page */
+.form--search {
+    display: flex;
+    justify-content: flex-end;
+    width: 335px;
+
+    input {
+        @include placeholder($white);
+        background: transparent;
+        border: 2px solid #{$white};
+        color: #{$white};
+        display: block;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    button {
+        background: #{$white};
+        height: 40px;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 2px;
+        transition: all .3s ease-in-out;
+
+        i {
+            color: #{$red-v3};
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    @media (max-width: 1110px) {
+        width: 270px;
+    }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+.form--footer-search  {
+    @extend .form--search;
+
+    button {
+        width: auto;
+        color:  #{$red-v3};
+        padding: 13px 21px;
+        font-size: 12px;
+    }
+}
+

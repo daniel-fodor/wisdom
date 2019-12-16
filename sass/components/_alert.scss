@@ -1,0 +1,47 @@
+.alert {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    align-items: center;
+
+    h4 {
+        color: #{$white};
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        color: #{$white};
+        margin-bottom: 0;
+        font-size: 11px;
+    }
+
+    .alert-icon {
+        i {
+            display: block;
+            background: url('#{$imgUrl}/danger.png') no-repeat;
+            width: 37px;
+            height: 31px;
+        }
+    }
+
+    .alert-content {
+        padding-left: 20px;
+    }
+}
+
+.alert-primary {
+    background: #{$alert-blue};
+}
+
+.alert-danger {
+    background: #{$alert-red};
+}
+
+.alert-warning {
+    background: #{$alert-yellow};
+}
+
+.alert-success {
+    background: #{$alert-green};
+}

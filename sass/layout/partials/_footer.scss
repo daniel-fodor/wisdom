@@ -1,0 +1,201 @@
+/* Page Footer style  */
+.page-footer {
+    color: #{$white};
+    background: #{$red-v3};
+
+    /* footer search  forms */
+    .footer-search-form {
+        max-width: 549px;
+        min-width: 300px;
+        width: 100%;
+        position: relative;
+
+        .input-search {
+            height: 60px;
+        }
+
+        input {
+            border-radius: 30px;
+            padding: 0 50px;
+            height: inherit;
+            width: 100%;
+            @include placeholder($placeholderColor);
+        }
+
+        button {
+            position: absolute;
+            text-align: right;
+            top: 0;
+            right: 0;
+            height: inherit;
+            color: #{$white};
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding: 0 1.5em;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* mq */
+        @media (max-width: 1700px) {
+            max-width: 320px;
+
+            input {
+                padding: 0 20px;
+            }
+
+            button {
+                padding: 0 1em;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .input-search {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 990px) {
+            width: 100%;
+        }
+    }
+
+    .footer-inner {
+        padding: 60px 0 52px 0;
+
+        p,
+        address {
+            color: #{$white};
+            opacity: 0.8;
+            font-size: 0.875rem;
+            letter-spacing: -0.2px;
+
+            a {
+                font-size: 0.875rem;
+                color: #{$white};
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding: 40px 0;
+        }
+    }
+
+    /* title of the blocks */
+    .footer-title {
+        color: #{$white};
+        font-weight: 600;
+        margin-bottom: 1.875rem;
+        letter-spacing: 0.3px;
+        font-size: 1.125rem;
+
+        @media (max-width: 767px) {
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    /* follow-us block */
+    .follow-us {
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 270px;
+            margin-bottom: -30px;
+
+            li {
+                margin-bottom: 30px;
+                margin-right: 14px;
+
+                a {
+                    border: 2px solid #{$white};
+                    border-radius: 7px;
+                    opacity: 0.8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    opacity: 0.8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                i {
+                    font-size: 1.3rem;
+                    color: #{$white};
+                    position: relative;
+                    top: 1px;
+                }
+
+                .icon-twitter {
+                    font-size: 1.1rem;
+                }
+
+                .icon-gplus {
+                    font-size: 1rem;
+                }
+
+                .icon-youtube {
+                    font-size: 1.5rem;
+                }
+
+                .icon-vimeo {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            ul {
+                max-width: 100%;
+                margin-bottom: 20px;
+
+                li {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        padding-left: 3.4vw;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .newsletter {
+        padding-left: 2.4vw;
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* copyright */
+    .footer-bottom {
+        background: #{$red-v4};
+        padding: 21px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: #{$white};
+            font-size: 0.875rem;
+            line-height: 1;
+            letter-spacing: 0.3px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+}

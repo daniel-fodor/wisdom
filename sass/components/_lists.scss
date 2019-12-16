@@ -1,0 +1,32 @@
+/* global list type (sidebar) */
+.list-items {
+
+    .list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+
+        a {
+            display: block;
+            color: #{$gray-v3};
+            font-size: 14px;
+            font-weight: 500;
+
+            &:hover {
+                color: #{$red-v1};
+            }
+        }
+
+        span {
+            line-height: 1;
+        }
+
+        i {
+            color: #{$red-v1};
+            position: relative;
+            top: 1px;
+            margin-right: 10px;
+            font-size: 10px;
+        }
+    }
+}

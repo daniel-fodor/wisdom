@@ -1,0 +1,121 @@
+/* Base style */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: $selectionColor;
+    text-shadow: none;
+}
+
+::selection {
+    color: #fff;
+    background: $selectionColor;
+    text-shadow: none;
+}
+
+html,
+body {
+    background: $bodyColor;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #{$red-v3};
+    font-family: inherit;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.4px;
+}
+
+h1 {
+    font-size: 1.625rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p {
+    color: #{$gray-v3};
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+}
+
+a {
+    color: $link-color;
+    transition: all .3s ease-in-out;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: $link-hover-color;
+    }
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+strong {
+    color: #{$red-v3};
+}
+
+
+hr {
+    background: #{$gray-v2};
+    height: 2px;
+    border: none;
+    margin: 30px 0;
+}

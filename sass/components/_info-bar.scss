@@ -1,0 +1,106 @@
+/* home page: info bar */
+.info-bar {
+    background: #{$white};
+    margin-bottom: 30px;
+    height: 60px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(#000, 0.08);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        border-right: 2px solid #{$gray-v2};
+
+        .info-icon {
+            display: inline-flex;
+            background: url("../img/info-icon.png") no-repeat;
+            background-size: 100%;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        padding: 0 1.6vw;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: -0.2px;
+    }
+
+    &__right {
+        border-left: 2px solid #{$gray-v2};
+        padding: 0 36px;
+        position: relative;
+
+        .step-arrow {
+            position: absolute;
+            display: block;
+            transition: opacity .3s ease-in-out;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            i {
+                font-size: 9px;
+                width: 7px;
+            }
+
+            &.up {
+                top: 10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            &.down {
+                bottom: 8px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    /* mqs */
+    @media (max-width: 800px) {
+        height: 80px;
+
+        &__left {
+            padding: 0 20px;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 570px) {
+
+        &__left {
+            padding: 0 15px;
+
+            .info-icon {
+                width: 19px;
+                height: 19px
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}

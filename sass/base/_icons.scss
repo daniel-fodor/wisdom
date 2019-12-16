@@ -1,0 +1,118 @@
+@font-face {
+	font-family: "Icons";
+	src: url('#{$fontUrl}/icons/Icons.eot');
+	src: url('#{$fontUrl}/icons/Icons.eot?#iefix') format('eot'),
+		url('#{$fontUrl}/icons/Icons.woff2') format('woff2'),
+		url('#{$fontUrl}/icons/Icons.woff') format('woff'),
+		url('#{$fontUrl}/icons/Icons.ttf') format('truetype'),
+		url('#{$fontUrl}/icons/Icons.svg#Icons') format('svg');
+}
+
+.icon:before {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-avatar:before {
+	content: "\E001";
+}
+
+.icon-calendar:before {
+	content: "\E002";
+}
+
+.icon-camera:before {
+	content: "\E003";
+}
+
+.icon-clock:before {
+	content: "\E004";
+}
+
+.icon-comment:before {
+	content: "\E005";
+}
+
+.icon-down-arrow:before {
+	content: "\E006";
+}
+
+.icon-facebook:before {
+	content: "\E007";
+}
+
+.icon-gplus:before {
+	content: "\E008";
+}
+
+.icon-instagram:before {
+	content: "\E009";
+}
+
+.icon-linkedin:before {
+	content: "\E00A";
+}
+
+.icon-list-icon:before {
+	content: "\E00B";
+}
+
+.icon-next-arrow:before {
+	content: "\E00C";
+}
+
+.icon-pin:before {
+	content: "\E00D";
+}
+
+.icon-pinterest:before {
+	content: "\E00E";
+}
+
+.icon-play:before {
+	content: "\E00F";
+}
+
+.icon-prev-arrow:before {
+	content: "\E010";
+}
+
+.icon-report-symbol:before {
+	content: "\E011";
+}
+
+.icon-right-arrow:before {
+	content: "\E012";
+}
+
+.icon-search:before {
+	content: "\E013";
+}
+
+.icon-smiling:before {
+	content: "\E014";
+}
+
+.icon-twitter:before {
+	content: "\E015";
+}
+
+.icon-up-arrow:before {
+	content: "\E016";
+}
+
+.icon-vimeo:before {
+	content: "\E017";
+}
+
+.icon-youtube:before {
+	content: "\E018";
+}

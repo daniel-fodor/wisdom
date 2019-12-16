@@ -1,0 +1,93 @@
+/* pagination style */
+.pagination {
+    background: #{$white};
+    max-width: 512px;
+    width: 100%;
+    padding: 10px 13px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 40px rgba(#000, 0.08);
+
+    @media (max-width: 600px) {
+        max-width: 100%;
+        margin-top: -30px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (max-width: 600px) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        li {
+            width: 2.6875rem;
+
+            &:not(:last-child) {
+                margin-right: 17px;
+
+
+                @media (max-width: 600px) {
+                    margin-right: 10px;
+                }
+            }
+
+            a {
+                display: block;
+                color: #{$gray-v5};
+                font-size: 1.375rem;
+                padding: 2px 5px;
+                font-weight: 500;
+                border-radius: 5px;
+                text-align: center;
+
+                &:hover {
+                    color: #{$white};
+                    background: #{$red-v3};
+                }
+
+
+                @media (max-width: 600px) {
+                    font-size: 1rem;
+                }
+            }
+
+            &.more,
+            &.last {
+                margin-left: 0.7vw;
+            }
+
+            &.more {
+                letter-spacing: 0.8px;
+            }
+
+            &.active a {
+                color: #{$white};
+                background: #{$red-v3};
+            }
+
+            /* steppers */
+            &.prev a,
+            &.next a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                height: 100%;
+
+                i {
+                    position: relative;
+                    top: 1px;
+                }
+
+                &:hover {
+                    color: #{$gray-v5};
+                    background: #{$gray-v2};
+                }
+            }
+        }
+    }
+}

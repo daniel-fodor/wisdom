@@ -1,0 +1,46 @@
+/* homepage: main slider */
+.tile-slider-wrapper {
+    display: flex;
+    flex: 1 0 74%;
+    overflow: hidden;
+    position: relative;
+
+    .stepper {
+        width: 100%;
+        position: absolute;
+        top: 10%;
+
+        button {
+            color: #{$white};
+            opacity: 0.4;
+            position: absolute;
+            font-size: 27px;
+            transition: opacity .3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .prev {
+            left: 25px;
+        }
+
+        .next {
+            right: 25px;
+        }
+    }
+}
+
+.tile-slider {
+    width: 100%;
+
+    .slide {
+        height: 100%;
+    }
+
+    .slick-track,
+    .slick-list {
+        height: 100%;
+    }
+}

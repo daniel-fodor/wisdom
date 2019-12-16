@@ -1,0 +1,82 @@
+.cs-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #{$white};
+    border-radius: 4px;
+    padding: 0.8rem 3.25rem;
+    transition: all .3s ease-in-out;
+    background: #{$red-v1};
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &:hover {
+        color: #{$white};
+        background: #{$red-v2};
+    }
+}
+
+.cs-btn-flat {
+    background: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+
+    span {
+        display: block;
+    }
+
+    &:focus,
+    &:hover {
+        color: #{$gray-v2};
+
+        i {
+            transform: translate(5px, 0);
+        }
+    }
+
+    i {
+        margin-left: 10px;
+        position: relative;
+        top: 1px;
+        transition: all .3s ease-in-out;
+    }
+
+    &--light {
+        color: #{$white};
+
+        i {
+            color: #{$white};
+        }
+    }
+
+    &--dark {
+        color: #{$red-v3};
+
+        i {
+            color: #{$red-v1};
+        }
+
+        &:focus,
+        &:hover {
+            color: #{$red-v1};
+        }
+    }
+
+    &--sm {
+        font-size: 12px;
+
+        i {
+            margin-left: 7px;
+            font-size: 10px;
+        }
+    }
+}

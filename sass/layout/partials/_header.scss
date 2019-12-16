@@ -1,0 +1,228 @@
+/* Page Header style */
+.page-header {
+    position: relative;
+    z-index: 10;
+
+    /* top items */
+    &__top {
+        background: $red-v1;
+    }
+
+    .page-header-submenu {
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            display: flex;
+
+            li {
+                a {
+                    color: #{$white};
+                    font-size: 0.6875rem;
+                    display: block;
+                    opacity: 0.7;
+                    padding: 0.8125rem 1.3125rem;
+
+                    &:focus,
+                    &:hover {
+                        opacity: 1;
+                        background: #{$link-hover-color};
+                    }
+                }
+
+                &.active a {
+                    opacity: 1;
+                    background: #{$link-hover-color};
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+
+    /* middle items */
+    &__middle {
+        background: $red-v1;
+        padding: 21px 0;
+
+        .middle-content {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 900px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .middle-left,
+    .middle-right {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 600px) {
+            width: 100%;
+
+            .page-header-brand {
+                width: 100%;
+            }
+        }
+    }
+
+    .middle-right {
+        justify-content: flex-end;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    .brand-logo {
+        display: block;
+        padding-right: 2.5vw;
+        height: 78px;
+        border-right: 2px solid #{$red-v5};
+        transition: opacity .3s ease-in-out;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        img {
+            display: block;
+            max-width: 285px;
+            height: auto;
+            position: relative;
+        }
+
+        @media (max-width: 1110px) {
+            height: 48px;
+            img {
+                max-width: 205px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            border: none;
+            padding-right: 0;
+        }
+    }
+
+    .brand-text {
+        max-width: 330px;
+        margin-left: 2.5vw;
+
+        p {
+            color: #{$white};
+            margin-bottom: 0;
+            opacity: 0.8;
+            font-size: 0.75rem;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 500px;
+        }
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    /* bottom items */
+
+    &__bottom {
+        background: #{$red-v2};
+    }
+
+    .bottom-content {
+        display: flex;
+        justify-content: space-between;
+
+        .navbar-extend {
+
+            .extend-btn {
+                color: #{$white};
+                background: #{$red-v3};
+                display: block;
+                padding: 1.4125rem 1.9rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                transition: all .3s ease-in-out;
+                line-height: 1;
+                min-width: 95px;
+                width: 100%;
+                text-align: center;
+
+                &:after {
+                    display: none;
+                }
+
+                &:hover {
+                    background: #{$white};
+                    color: #{$red-v2};
+                }
+            }
+
+            .extend-dropdown {
+                right: 0;
+                border: none;
+                min-width: 360px;
+                margin-top: 15px;
+                box-shadow: 0 10px 40px rgba(#000, .14);
+                padding: 10px 0;
+
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-left: 9px solid transparent;
+                    border-right: 9px solid transparent;
+                    border-bottom: 9px solid #{$white};
+                    position: absolute;
+                    top: -9px;
+                    right: 85px;
+                }
+
+                @media (max-width: 600px) {
+                    min-width: 300px;
+                    &:after {
+                        right: 70px;
+                    }
+                }
+            }
+        }
+
+        .recent-items {
+            padding: 0 20px;
+
+            li {
+                padding: 20px 0;
+
+                &:not(:last-child) {
+                    border-bottom: 2px solid #{$gray-v2};
+                }
+
+                &:hover h3 {
+                    color: #{$black};
+                }
+
+                h3 {
+                    margin-bottom: 12px;
+                    color: #{$red-v3};
+                    font-size: 1rem;
+                    font-weight: 600;
+                    letter-spacing: -0.3px;
+                    transition: all .3s ease-in-out;
+                }
+
+                .comment-info {
+                    font-size: 0.75rem;
+                    color: #{$gray-v3};
+                }
+            }
+        }
+    }
+}

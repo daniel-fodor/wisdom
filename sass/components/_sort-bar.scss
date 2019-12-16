@@ -1,0 +1,33 @@
+/* gallery sort by items */
+.sort-bar {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span {
+        color: #{$red-v3};
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        margin-right: 1.6vw;
+    }
+
+    .nav-link {
+        color: #{$gray-v3};
+    }
+
+    .nav-link.active {
+        background: #{$red-v1};
+        font-size: 1rem;
+        padding: 0.6rem 1.9rem;
+    }
+
+    @media (max-width: 480px) {
+        > ul {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

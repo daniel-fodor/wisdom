@@ -1,0 +1,44 @@
+/* style for tabs */
+.tabs {
+    border-bottom: 2px solid #{$gray-v2};
+
+    .nav-item {
+        margin-right: 50px;
+
+        @media (max-width: 600px) {
+            margin-right: 25px;
+        }
+    }
+
+    .nav-link {
+        color: #{$gray-v4};
+        padding: 0;
+        border: none;
+        letter-spacing: -0.2px;
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 10px;
+
+        &:after {
+            content: '';
+            transition: width .3s ease-in-out;
+            width: 0;
+        }
+    }
+
+    .nav-link.active {
+        color: #{$red-v3};
+        border: none;
+        font-weight: 600;
+
+        &:after {
+            content: '';
+            background:  #{$red-v1};
+            position: absolute;
+            bottom: -2px;
+            height: 4px;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
